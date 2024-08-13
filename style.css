@@ -391,3 +391,44 @@ footer .column > a:hover{
         grid-template-columns: 1fr 150px;
     }
 }
+
+.features-web {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.features-web .cardWeb {
+    background-color: #27272a;
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.features-web .cardWeb:hover {
+    background-color: #323232;
+    border-color: #fff;
+}
+
+.features-web .video-card {
+    grid-column: span 2;
+}
+
+.features-web .cardWeb img,
+.features-web .cardWeb video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+@media (max-width: 900px) {
+    .features-web {
+        grid-template-columns: 1fr;
+    }
+
+    .features-web .video-card {
+        grid-column: span 1;
+    }
+}
