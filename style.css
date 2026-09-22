@@ -578,3 +578,16 @@ footer .column h4{
         padding-block: 2.5rem 1rem;
     }
 }
+
+.footer-mail{
+    margin-bottom: 1.25rem;
+}
+
+.footer-mail a{
+    color: #60a5fa;
+    transition: color 0.3s ease;
+}
+
+.footer-mail a:hover{
+    color: #1d4ed8;
+}
