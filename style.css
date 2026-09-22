@@ -618,3 +618,10 @@ nav{
     aspect-ratio: 16 / 9;
     height: auto;
 }
+
+/* Con width/height declarados en el HTML, el navegador reserva el espacio
+   correcto, pero hace falta height:auto para que la imagen escale
+   manteniendo su proporcion en vez de estirarse. */
+img{
+    height: auto;
+}
