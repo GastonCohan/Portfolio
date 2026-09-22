@@ -591,3 +591,30 @@ footer .column h4{
 .footer-mail a:hover{
     color: #1d4ed8;
 }
+
+/* Scroll suave nativo para las anclas del nav */
+html{
+    scroll-behavior: smooth;
+}
+
+/* Header sin logo: navegacion centrada */
+nav{
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+@media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior: auto; }
+}
+
+/* Los videos con preload="none" no tienen tamano intrinseco hasta que
+   cargan. Les fijamos la proporcion para que no muevan el layout. */
+.features .card video{
+    aspect-ratio: 9 / 16;
+    height: auto;
+}
+
+.features-web .cardWeb video{
+    aspect-ratio: 16 / 9;
+    height: auto;
+}
