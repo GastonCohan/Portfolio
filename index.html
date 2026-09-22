@@ -1,142 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gastón Cohan — React &amp; React Native Developer</title>
+    <meta name="description"
+        content="React and React Native developer with 5 years of experience building production web and mobile apps. Based in Argentina, available for remote work.">
+
+    <meta property="og:title" content="Gastón Cohan — React &amp; React Native Developer">
+    <meta property="og:description"
+        content="React and React Native developer with 5 years of experience building production web and mobile apps.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gastoncohan.github.io/Portfolio/">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Personal Portfolio</title>
 </head>
 
-<body>
+<body id="top">
     <nav>
         <div class="nav-logo">
-            <a href="#">
-                <img src="images/logo.svg">
-            </a>
+            <a href="#top" class="logo-text">Gastón Cohan</a>
         </div>
 
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false">
+            <i class="ri-menu-line"></i>
+        </button>
+
         <ul class="nav-links">
-            <li class="link"><a href="#">Home</a></li>
-            <li id="link1" class="link"><a href="#">Projects</a></li>
-            <li id="link2" class="link"><a href="#footer">About</a></li>
+            <li class="link"><a href="#top" id="link-home">Home</a></li>
+            <li class="link"><a href="#work" id="link-work">Work</a></li>
+            <li class="link"><a href="#projects" id="link-projects">Projects</a></li>
+            <li class="link"><a href="#footer" id="link-about">About</a></li>
         </ul>
-        <button class="btn" onclick="window.open(`https://www.linkedin.com/in/gaston-cohan-3b182b186/`, '_blank')">Contact Me</button>
+
+        <a class="btn" href="https://www.linkedin.com/in/gaston-cohan-3b182b186/" target="_blank"
+            rel="noopener">Contact Me</a>
     </nav>
 
     <header class="container">
         <div class="content">
             <span class="blur"></span>
             <span class="blur"></span>
-            <h4>CREATE YOUR SITE / APP LIKE A PRO</h4>
-            <H1>Hi, I'm <span>Gastón Cohan</span>, React & React Native Developer</H1>
+            <h4>REACT &amp; REACT NATIVE DEVELOPER</h4>
+            <h1>Hi, I'm <span>Gastón Cohan</span>, React &amp; React Native Developer</h1>
             <p>
-                Hello! With three years of experience in React and React Native, I specialize in creating outstanding mobile and web apps that deliver excellent user experiences. From writing clean code to designing intuitive interfaces, I'm dedicated to bringing your ideas to life. Let's collaborate to build something exceptional!
+                I build web and mobile applications with React and React Native. Over the past five years I've worked
+                on products used in production — from the interface people touch to the services behind it. I care
+                about apps that stay fast and simple to use, even when there's a lot going on underneath.
+                I'm based in Argentina and work remotely.
             </p>
         </div>
         <div class="image">
-            <img src="images/header.png">
+            <img src="images/header.png" alt="Illustration of a developer working on web and mobile interfaces">
         </div>
     </header>
 
-    <section class="container" style="margin-bottom: -5%;">
-        <h2 class="header">MY PROJECTS</h2>
-        <h2 style="color: white;">Rappi Clone</h2>
-        <div style="flex-direction: row; display: flex; margin-bottom: -3%;">
-            <h4 style="margin-bottom: 2%;">React Native - Sanity - TaiwlindCss - Javascript</h4>  
-            <h4 style="text-decoration: underline; cursor: pointer; color: beige; margin-left: 2%;" onclick="window.open(`https://github.com/GastonCohan/Rappi2.0`, '_blank')">See the code</h4>
-        </div>
-        <div class="features">
-            <div class="card">
-                <video width="100%" height="100%" controls autoplay>
-                    <source src="images/VideoRappi.mp4" type="video/mp4">
-                </video>
+    <!-- ===================== TRABAJO PROFESIONAL ===================== -->
+    <section class="container section" id="work">
+        <h2 class="header">PROFESSIONAL WORK</h2>
+        <p class="section-intro">
+            Applications I built professionally, shipped to real users.
+        </p>
+
+        <!-- YPF Ruta -->
+        <article class="project">
+            <h3 class="project-title">YPF Ruta</h3>
+            <div class="project-meta">
+                <span class="project-stack">React Native CLI · JavaScript · Node.js</span>
+                <a class="project-link" href="https://play.google.com/store/apps/details?id=com.ypf.ypfruta"
+                    target="_blank" rel="noopener">View on Google Play</a>
             </div>
-            <div class="card">
-                <img src="images/rappiclone01.png">
+            <p class="project-desc">
+                A React Native app for YPF, Argentina's largest energy company, built around a digital wallet
+                for its vehicle fleet. Drivers manage their YPF Ruta cards from their phone — checking balances,
+                starting purchases at service stations and reviewing receipts — instead of relying on the
+                physical card. I contributed to its development at Everis inside a Scrum team, and built and
+                distributed the APK and IPA builds used for internal testing cycles. Over 100,000 downloads.
+            </p>
+            <div class="features">
+                <div class="card">
+                    <img src="images/ypf-ruta-1.webp" alt="YPF Ruta card management screen" loading="lazy">
+                </div>
+                <div class="card">
+                    <img src="images/ypf-ruta-2.webp" alt="YPF Ruta purchase flow screen" loading="lazy">
+                </div>
+                <div class="card">
+                    <img src="images/ypf-ruta-3.webp" alt="YPF Ruta balance and receipts screen" loading="lazy">
+                </div>
             </div>
-            <div class="card">
-                <img src="images/rappiclone03.png">
-            </div>  
-            <div class="card">
-                <img src="images/rappiclone04.png">
+        </article>
+
+        <!-- Fotosprint -->
+        <article class="project">
+            <h3 class="project-title">FotoSprint</h3>
+            <div class="project-meta">
+                <span class="project-stack">React Native · JavaScript</span>
+                <a class="project-link" href="https://play.google.com/store/apps/details?id=app.rems.fotosprint"
+                    target="_blank" rel="noopener">View on Google Play</a>
             </div>
-        </div>
+            <p class="project-desc">
+                A photo printing service built around the phone. People pick shots from their camera roll,
+                turn them into prints and photo books through an in-app editor, and have them delivered at home.
+                It runs across Argentina, Mexico and Chile. I worked on the React Native app as a front-end
+                developer. It holds 4.6 stars across nearly 2,000 reviews and over 100,000 downloads.
+            </p>
+            <div class="features">
+                <div class="card">
+                    <img src="images/fotosprint-1.webp" alt="FotoSprint photo selection screen" loading="lazy">
+                </div>
+                <div class="card">
+                    <img src="images/fotosprint-2.webp" alt="FotoSprint photo book editor screen" loading="lazy">
+                </div>
+                <div class="card">
+                    <img src="images/fotosprint-3.webp" alt="FotoSprint product catalogue screen" loading="lazy">
+                </div>
+            </div>
+        </article>
+
+        <!-- deCampoaCampo -->
+        <article class="project">
+            <h3 class="project-title">deCampoaCampo</h3>
+            <div class="project-meta">
+                <span class="project-stack">React Native · Redux · Expo · JavaScript</span>
+                <a class="project-link" href="https://play.google.com/store/apps/details?id=com.decampoacampo.mercado"
+                    target="_blank" rel="noopener">View on Google Play</a>
+            </div>
+            <p class="project-desc">
+                The mobile app for Argentina's largest online cattle market. Producers list their herds from
+                the field and reach thousands of buyers — other producers, meatpackers, supermarkets and
+                butchers. I develop and maintain features in React Native, using Redux for global state and a
+                centralized API service layer behind an API Gateway. I built reusable components on shared
+                architectural conventions, implemented secure token storage with SecureStore so sensitive data
+                never lands in unencrypted storage, and wrote component tests to validate each feature.
+                The app has over 100,000 downloads.
+            </p>
+            <div class="features">
+                <div class="card">
+                    <img src="images/decampoacampo-1.webp" alt="deCampoaCampo cattle listing screen" loading="lazy">
+                </div>
+                <div class="card">
+                    <img src="images/decampoacampo-2.webp" alt="deCampoaCampo listing detail screen" loading="lazy">
+                </div>
+                <div class="card">
+                    <img src="images/decampoacampo-3.webp" alt="deCampoaCampo marketplace browse screen" loading="lazy">
+                </div>
+            </div>
+        </article>
+
+        <!-- GreenBiz Tracker -->
+        <article class="project">
+            <h3 class="project-title">GreenBiz Tracker</h3>
+            <div class="project-meta">
+                <span class="project-stack">React.js · JavaScript</span>
+                <a class="project-link" href="https://www.greenbiztracker.org/" target="_blank"
+                    rel="noopener">Visit the site</a>
+            </div>
+            <p class="project-desc">
+                A web platform for Green Business certification programs in the United States, now running
+                across eight states. Certified businesses are listed on a searchable map the public can
+                browse by category and distance, and a metrics dashboard aggregates the environmental impact
+                of every certified business — emissions, energy, water and waste saved — with over a billion
+                pounds of CO₂ tracked to date. I built front-end features in React for this U.S. client at
+                Algoritmo Taller Digital, including the interactive map and the data visualisation views.
+            </p>
+            <div class="features-web">
+                <div class="cardWeb">
+                    <img src="images/greenbiz-1.png" alt="GreenBiz Tracker participating states map"
+                        loading="lazy">
+                </div>
+                <div class="cardWeb">
+                    <img src="images/greenbiz-2.png" alt="GreenBiz Tracker business search with interactive map"
+                        loading="lazy">
+                </div>
+                <div class="cardWeb">
+                    <img src="images/greenbiz-3.png" alt="GreenBiz Tracker metrics dashboard" loading="lazy">
+                </div>
+            </div>
+        </article>
     </section>
 
-    <div style="margin-top: -8%">
-        <section class="container">
-            <h2 style="color: white;">Disney Clone</h2>
-            <div style="flex-direction: row; display: flex; margin-bottom: -3%;">
-                <h4 style="margin-bottom: 2%;">React - Javascript - CSS - Firebase - Redux Toolkit</h4>  
-                <h4 style="text-decoration: underline; cursor: pointer; color: beige; margin-left: 2%;" onclick="window.open(`https://github.com/GastonCohan/DisneyClone`, '_blank')">See the code</h4> 
-                <h4 style="color: beige; margin-left: 2%;">/</h4>  
-                <h4 style="text-decoration: underline; cursor: pointer; color: beige; margin-left: 2%;" onclick="window.open(`https://gastoncohan.github.io/DisneyClone/`, '_blank')">See the WebSite</h4> 
+    <!-- ===================== PROYECTOS PERSONALES ===================== -->
+    <section class="container section" id="projects">
+        <h2 class="header">PERSONAL PROJECTS</h2>
+        <p class="section-intro">
+            Side projects I built to explore tools and ideas outside of work.
+        </p>
+
+        <article class="project">
+            <h3 class="project-title">Rappi Clone</h3>
+            <div class="project-meta">
+                <span class="project-stack">React Native · Sanity · TailwindCSS · JavaScript</span>
+                <a class="project-link" href="https://github.com/GastonCohan/Rappi2.0" target="_blank"
+                    rel="noopener">See the code</a>
             </div>
-               
+            <div class="features">
+                <div class="card">
+                    <video width="100%" height="100%" controls preload="none">
+                        <source src="images/VideoRappi.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="card">
+                    <img src="images/rappiclone01.png" alt="Rappi Clone order tracking screen" loading="lazy">
+                </div>
+                <div class="card">
+                    <img src="images/rappiclone03.png" alt="Rappi Clone restaurant listing screen" loading="lazy">
+                </div>
+                <div class="card">
+                    <img src="images/rappiclone04.png" alt="Rappi Clone checkout screen" loading="lazy">
+                </div>
+            </div>
+        </article>
+
+        <article class="project">
+            <h3 class="project-title">Disney Clone</h3>
+            <div class="project-meta">
+                <span class="project-stack">React · JavaScript · CSS · Firebase · Redux Toolkit</span>
+                <a class="project-link" href="https://github.com/GastonCohan/DisneyClone" target="_blank"
+                    rel="noopener">See the code</a>
+                <a class="project-link" href="https://gastoncohan.github.io/DisneyClone/" target="_blank"
+                    rel="noopener">See the website</a>
+            </div>
             <div class="features-web">
                 <div class="cardWeb video-card">
-                    <video width="100%" height="100%" controls autoplay>
+                    <video width="100%" height="100%" controls preload="none">
                         <source src="images/disneyClone.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
                     </video>
                 </div>
                 <div class="cardWeb">
-                    <img src="images/disneyclone01.png">
+                    <img src="images/disneyclone01.png" alt="Disney Clone home screen" loading="lazy">
                 </div>
                 <div class="cardWeb">
-                    <img src="images/disneyclone02.png">
-                </div>  
-                <div class="cardWeb">
-                    <img src="images/disneyclone03.png">
+                    <img src="images/disneyclone02.png" alt="Disney Clone content carousel" loading="lazy">
                 </div>
                 <div class="cardWeb">
-                    <img src="images/disneyclone04.png">
+                    <img src="images/disneyclone03.png" alt="Disney Clone detail view" loading="lazy">
+                </div>
+                <div class="cardWeb">
+                    <img src="images/disneyclone04.png" alt="Disney Clone browse view" loading="lazy">
                 </div>
             </div>
-            
-        </section>
-    </div>
+        </article>
+    </section>
 
     <footer id="footer" class="container">
         <span class="blur"></span>
         <span class="blur"></span>
-        <div class="column" id="link2">
-            <div class="logo">
-                <img src="images/logo.svg">
-            </div>
+        <div class="column">
+            <h4>Gastón Cohan</h4>
             <p>
-              Here you can find my Instagram, Twitter and Curriculum Vitae !
+                React &amp; React Native developer based in Argentina, available for remote work.
+                Feel free to reach out.
             </p>
             <div class="socials">
-                <a href="https://www.instagram.com/gastoncohaan" target="_blank"><i class="ri-instagram-line"></i></a>
-                <a href="https://www.twitter.com/gastoncohan" target="_blank"><i class="ri-twitter-line"></i></a>
-                <a href="cv.pdf" download><i class="ri-file-text-line" target="_blank"></i></a>
+                <a href="https://github.com/GastonCohan" target="_blank" rel="noopener" aria-label="GitHub">
+                    <i class="ri-github-fill"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/gaston-cohan-3b182b186/" target="_blank" rel="noopener"
+                    aria-label="LinkedIn">
+                    <i class="ri-linkedin-box-fill"></i>
+                </a>
+                <a href="https://www.instagram.com/gastoncohaan" target="_blank" rel="noopener" aria-label="Instagram">
+                    <i class="ri-instagram-line"></i>
+                </a>
+                <a href="cv.pdf" download aria-label="Download CV">
+                    <i class="ri-file-text-line"></i>
+                </a>
             </div>
-        </div>
-        <div class="column">
-            <h4>Company</h4>
-            <a href="#">Business</a>
-            <a href="#">Partnership</a>
-            <a href="#">Network</a>
-        </div>
-        <div class="column">
-            <h4>About Us</h4>
-            <a href="#">Blogs</a>
-            <a href="#">Channels</a>
-            <a href="#">Sponsors</a>
-        </div>
-        <div class="column">
-            <h4>Contact</h4>
-            <a href="#">Contact Us</a>
-            <a href="#">Privicy Policy</a>
-            <a href="#">Terms & Conditions</a>
         </div>
     </footer>
 
     <div class="copyright">
-        Copyright © 2023 AsmrProg Channel. All Rights Reserved.
+        © <span id="year">2026</span> Gastón Cohan
     </div>
-
 
     <script src="script.js"></script>
 </body>

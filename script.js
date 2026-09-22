@@ -1,26 +1,36 @@
-function scrollToElement(elementSelector, instance = 0) {
-    // Select all elements that match the given selector
-    const elements = document.querySelectorAll(elementSelector);
-    // Check if there are elements matching the selector and if the requested instance exists
-    if (elements.length > instance) {
-        // Scroll to the specified instance of the element
-        elements[instance].scrollIntoView({ behavior: 'smooth' });
+function scrollToSection(selector) {
+    const el = document.querySelector(selector);
+    if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
     }
 }
 
-const link1 = document.getElementById("link1");
-const link2 = document.getElementById("link2");
-const link3 = document.getElementById("link3");
+// Cada link del nav hace scroll suave a su seccion.
+// El optional chaining evita que rompa si algun elemento no existe.
+const navLinks = [
+    ['link-home', '#top'],
+    ['link-work', '#work'],
+    ['link-projects', '#projects'],
+    ['link-about', '#footer'],
+];
 
-link1.addEventListener('click', () => {
-    scrollToElement('.header');
+navLinks.forEach(([id, target]) => {
+    document.getElementById(id)?.addEventListener('click', (e) => {
+        e.preventDefault();
+        scrollToSection(target);
+    });
 });
 
-link2.addEventListener('click', () => {
-    // Scroll to the second element with "header" class
-    scrollToElement('.header', 1);
+// Menu mobile: muestra/oculta la navegacion en pantallas chicas.
+const menuToggle = document.getElementById('menu-toggle');
+const navMenu = document.querySelector('.nav-links');
+
+menuToggle?.addEventListener('click', () => {
+    const isOpen = navMenu.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
 });
 
-link3.addEventListener('click', () => {
-    scrollToElement('.column');
+// Al tocar un link en mobile, cerramos el menu.
+navMenu?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => navMenu.classList.remove('open'));
 });

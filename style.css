@@ -432,3 +432,149 @@ footer .column > a:hover{
         grid-column: span 1;
     }
 }
+
+/* ============================================================
+   Ajustes y componentes nuevos
+   ============================================================ */
+
+/* --- Logo de texto (reemplaza el logo de la plantilla) --- */
+.nav-logo{
+    max-width: none;
+}
+
+.logo-text{
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+}
+
+/* --- Boton de menu mobile --- */
+.menu-toggle{
+    display: none;
+    background: transparent;
+    color: #fff;
+    font-size: 1.75rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+/* --- Secciones --- */
+.section{
+    padding-block: 4rem 2rem;
+}
+
+.section-intro{
+    color: #9ca3af;
+    max-width: 640px;
+    margin-bottom: 3rem;
+    line-height: 1.7;
+}
+
+/* --- Proyectos --- */
+.project{
+    margin-bottom: 5rem;
+}
+
+.project-title{
+    color: #fff;
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-meta{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.project-stack{
+    color: #9ca3af;
+    font-size: 0.95rem;
+}
+
+.project-link{
+    color: #60a5fa;
+    font-size: 0.95rem;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover{
+    color: #1d4ed8;
+}
+
+.project-desc{
+    color: #d1d5db;
+    max-width: 700px;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+/* --- Footer --- */
+footer .column p{
+    color: #9ca3af;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    max-width: 480px;
+}
+
+footer .column h4{
+    color: #fff;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.socials{
+    display: flex;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+
+.socials a{
+    color: #9ca3af;
+    transition: color 0.3s ease;
+}
+
+.socials a:hover{
+    color: #1d4ed8;
+}
+
+/* --- Navegacion en mobile --- */
+@media (width < 900px){
+    nav{
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .menu-toggle{
+        display: block;
+        order: 3;
+    }
+
+    .nav-links{
+        display: none;
+        flex-basis: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+        order: 4;
+        padding-top: 1rem;
+    }
+
+    /* El JS agrega .open al tocar el boton */
+    .nav-links.open{
+        display: flex;
+    }
+
+    .project-title{
+        font-size: 1.4rem;
+    }
+
+    .section{
+        padding-block: 2.5rem 1rem;
+    }
+}

@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# Node (por si en algun momento se agrega un build)
+node_modules/
+npm-debug.log*
+yarn-error.log*
